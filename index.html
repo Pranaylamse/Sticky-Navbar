@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #header{
+            text-align: center;
+
+        }
+        #logo{
+            width: 250px;
+            height: auto;
+        }
+        #menu-bar{
+            text-align: center;
+            background-color: cadetblue;
+
+
+        }
+        #menu-bar li{
+            display: inline-block;
+            padding: 15px 10px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #container{
+            text-align: center;
+            padding: 50px 100px;
+
+        }
+        #about-img{
+            width: 100%;
+        }
+        .sticky{
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="header">
+        <img src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=630/uploads/users/2273/posts/32751/image/Alpha-Design-Logo-Template.jpg" alt="" width="200px" height="100px">
+    </div>
+    <nav id="menu-bar" class="sticky">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Our Team</li>
+        <li>Client</li>
+        <li>Contact Us</li>
+    </nav>
+    
+    <div id="container">
+        <h1>About Us</h1>
+        <img id="about-img" src="https://images.unsplash.com/photo-1543877087-ebf71fde2be1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmF0dXJhbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="">
+
+        <p>Nature is full of beauties. Only we should have eyes to perceive them, as it is wisely said that beauty lies in the eyes of the beholder. We are surrounded by beauties of nature. If we look at the sky at night, we can see the sight of countless stars and the silvery moon.
+        </p>
+    </div>
+    <script>
+        window.addEventListener('scroll', function(){
+
+            let navbar = document.getElementById("menu-bar");
+            if(window.pageYOffset >= 190){
+               navbar.classList.add('sticky');
+
+            }else{
+                navbar.classList.remove('sticky');
+            }
+        });
+    </script>
+</body>
+</html>
